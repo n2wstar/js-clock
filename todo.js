@@ -26,19 +26,27 @@ function paintToDo(text) {
   const delBtn = document.createElement("button");
   const span = document.createElement("span");
   const newId = toDos.length + 1;
-  delBtn.innerText = "❌";
+  delBtn.innerText = "\u00D7";
   delBtn.addEventListener("click", deleteToDo);
   span.innerText = text;
-  li.appendChild(delBtn);
-  li.appendChild(span);
-  li.id = newId;
-  toDoList.appendChild(li);
-  const toDoObj = {
-    text: text,
-    id: newId
-  };
-  toDos.push(toDoObj);
-  saveToDos();
+
+  if(text === ''){
+    alert("Please write");
+  }else if(newId >6){
+    alert("Reach Maximum list. Limit is up to 7");
+  }
+  else{
+    li.appendChild(delBtn);
+    li.appendChild(span);
+    li.id = newId;
+    toDoList.appendChild(li);
+    const toDoObj = {
+      text: text,
+      id: newId
+    };
+    toDos.push(toDoObj);
+    saveToDos();
+  }
 }
 
 function handleSubmit(event) {
