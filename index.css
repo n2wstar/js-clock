@@ -1,4 +1,5 @@
 body{
+    width: 100%;
     background-color: #2c2c2c;
 }
 
@@ -18,8 +19,9 @@ input{
     border: none;
     width: 70%;
     font-size: 1rem;
-    padding: 12px 8px 12px 7px;
+    padding: 12px 0px 12px 7px;
     text-align: center;
+    opacity: 0.9;
 }
 
 .clicked{
@@ -33,7 +35,7 @@ input{
 
 .showing{
     display : block;
-    margin: 1rem;
+    margin: 0.3rem;
     font-size: 1.4rem;
     color: whitesmoke;
 }
@@ -56,7 +58,7 @@ input{
     opacity: 1;
 }
 
-h1,h4,li,ul{
+h1,h4,li,ul,.js-weather{
     list-style: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -64,7 +66,13 @@ h1,h4,li,ul{
 h1{
     font-size: 7.3rem;
     margin: 0;
+    text-align: -webkit-center;
     color: white;
+}
+
+ul{
+    padding:0;
+    text-align: -webkit-center;
 }
 
 ul li:nth-child(odd){
@@ -72,7 +80,7 @@ ul li:nth-child(odd){
 }
 
 ul li:nth-child(even){
-    background: #7f8c8d;
+    background: #57A4DE;
 }
 
 ul li:hover{
@@ -87,10 +95,10 @@ ul li.checked{
 
 li{
     width: 60%;
-    left: 50%;
     text-align: center;
-    color: #f44336;
-    padding: 12px 8px 12px 7px;
+    color: #3d4448;
+    padding: 12px 0px 12px 7px;
+    opacity: 0.9;
 }
 
 li button{
@@ -104,6 +112,6 @@ li button:hover{
     color: white;
 }
 
-li span{
-    padding-left: 1rem;
+.js-weather{
+    color: white;
 }
