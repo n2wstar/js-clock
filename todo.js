@@ -66,9 +66,17 @@ function loadToDos() {
   }
 }
 
+function listChecked(event){
+  const li = document.createElement("li");
+  if(event.target.tagName === 'LI'){
+    event.target.classList.toggle('checked');
+  }
+}
+
 function init() {
   loadToDos();
   toDoForm.addEventListener("submit", handleSubmit);
+  toDoList.addEventListener("click",listChecked);
 }
 
 init();

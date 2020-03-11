@@ -6,10 +6,11 @@ body{
 .header img{
     width: 3.5rem;
     border-radius: 50%;
+    opacity: 0.7;
 }
 
 .container{
-    text-align: center;
+    text-align: -webkit-center;
     margin-top: 10%;
 }
 
@@ -66,8 +67,8 @@ h1,h4,li,ul,.js-weather{
 h1{
     font-size: 7.3rem;
     margin: 0;
-    text-align: -webkit-center;
     color: white;
+    opacity: 0.9;
 }
 
 ul{
